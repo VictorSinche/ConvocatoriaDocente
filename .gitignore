@@ -1,0 +1,69 @@
+# ============================================
+# 🌐 IGNORAR ARCHIVOS GENERADOS - ConvocaDocente
+# Estructura: backend (PHP) + frontend (Vite React)
+# ============================================
+
+# === Node / Vite (frontend) ===
+frontend/node_modules/
+frontend/dist/
+frontend/.vite/
+frontend/.eslintcache
+frontend/.DS_Store
+
+# === Node / raíz (si existe package.json fuera del frontend)
+node_modules/
+dist/
+.vite/
+.eslintcache
+
+# === PHP / Backend ===
+backend/vendor/
+backend/uploads/*
+!backend/uploads/.gitkeep
+backend/.env
+backend/.DS_Store
+
+# === Archivos del sistema ===
+.DS_Store
+Thumbs.db
+ehthumbs.db
+desktop.ini
+
+# === Logs / temporales ===
+*.log
+*.tmp
+*.bak
+*.swp
+*.swo
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# === Archivos de entorno ===
+.env
+.env.local
+.env.development
+.env.production
+**/.env
+**/.env.*
+
+# === IDEs ===
+.vscode/
+.idea/
+
+# === Archivos comprimidos / binarios grandes ===
+*.zip
+*.rar
+*.tar.gz
+*.7z
+*.psd
+*.mp4
+*.avi
+*.iso
+
+# === Archivos Docker / despliegue ===
+docker-compose.override.yml
+docker-compose.dev.yml
+*.pid
+*.seed

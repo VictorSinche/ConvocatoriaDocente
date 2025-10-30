@@ -1,0 +1,28 @@
+version: "3.9"
+services:
+  backend:
+    build: ./backend
+    environment:
+      DB_HOST: ${DB_HOST}
+      DB_PORT: ${DB_PORT}
+      DB_NAME: ${DB_NAME}
+      DB_USER: ${DB_USER}
+      DB_PASS: ${DB_PASS}
+      CORS_ORIGIN: ${CORS_ORIGIN}
+    volumes:
+      - uploads_data:/var/www/html/uploads
+    ports:
+      - "8080:80"
+
+  frontend:
+    build:
+      context: ./frontend
+      args:
+        VITE_API_URL: ${VITE_API_URL}
+    depends_on:
+      - backend
+    ports:
+      - "5175:80"
+
+volumes:
+  uploads_data:
